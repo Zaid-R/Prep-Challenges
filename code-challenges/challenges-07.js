@@ -135,6 +135,8 @@ const cvFormatter = (arr) => {
 //  Note that:
 //  1- rejectedApplicants are applications that has both the names empty or null and whoever have one year or less of Experience
 
+
+
 const applicationsStatics = (arr) => {
     let result = {
         python_devs: 0,
@@ -146,8 +148,10 @@ const applicationsStatics = (arr) => {
     }
 
     arr.forEach(obj => {
-        let isFirstNameWrong = obj.firstName != null && obj.firstName.length == 0;
-        let isLastNameWrong = obj.lastName != null && obj.lastName.length == 0;
+        // let isFirstNameWrong = obj.firstName != null && obj.firstName.length == 0;
+        // let isLastNameWrong = obj.lastName != null && obj.lastName.length == 0;
+        let isFirstNameWrong = obj.firstName ==null;
+        let isLastNameWrong = obj.lastName == null;
         let isFullNameWrong = isFirstNameWrong && isLastNameWrong;
         if (isFullNameWrong || obj.yearsOfExperience <= 1) {
             result.rejectedApplicants++;
