@@ -55,7 +55,7 @@ describe("Challenge14-03", () => {
 });
 
 describe("Challenge14-04", () => {
-  test.skip("array_To_String", () => {
+  test("array_To_String", () => {
     let test1 = ["move", "it", "away", "from", "the", "street"];
     let res1 = "move it away from the, street";
 
@@ -68,7 +68,7 @@ describe("Challenge14-04", () => {
 });
 
 describe("Challenge14-05", () => {
-  test.skip("letter_Counter", () => {
+  test("letter_Counter", () => {
     let test1 = "aaaa bbb sdf";
     let res1 = "a4 b3 s1d1f1";
 

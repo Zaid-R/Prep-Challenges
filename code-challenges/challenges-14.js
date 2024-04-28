@@ -90,7 +90,11 @@ const replaceWords = (str) => {
 //
 
 const arrToStr = (arr) => {
-    // write your code here
+    for (let i = 4; i < arr.length; i += 5) {
+        arr[i] += ","
+    }
+    let result = arr.join(' ');
+    return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -112,7 +116,45 @@ const arrToStr = (arr) => {
 //
 
 const letterCounter = (str) => {
-    // write your code here
+    // let words = str.split(" ");
+    // // let wordsToEdit = words;
+    // let result = "";
+    // words.forEach(word => {
+    //     let repeat =1 ;
+    //     for(let i =0;i<word.length-1;i++){
+    //         let isEqual=word[i]==word[i+1];
+    //         if(isEqual){
+    //             repeat++;
+    //         }else if(i+1==word.length-1||!isEqual){
+    //             result+=word[i]+repeat;
+    //             repeat=1;
+    //         }
+    //     }
+    //     // result+=" ";
+    // });
+    // return result.trim();
+    let words = str.split(" ");
+    let result = "";
+    words.forEach(word => {
+        let repeat =1 ;
+        for(let i =0;i<word.length-1;i++){
+            let isEqual=word[i]==word[i+1];
+          let isLetterBeforeLast = i==word.length-2;
+            if(isEqual){
+                repeat++;
+            }
+           if(isLetterBeforeLast||!isEqual){
+                console.log(`here: ${word[i]}${repeat}`)
+                result+=word[i]+repeat;
+                repeat=1;
+            }
+            if(isLetterBeforeLast&&!isEqual){
+              result+=word[i+1]+repeat;
+            }
+        }
+        result+=" ";
+    });
+    return result.trim();
 }
 // -------------------------------------------------------------------------------------------------------
 
