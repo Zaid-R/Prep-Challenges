@@ -116,23 +116,6 @@ const arrToStr = (arr) => {
 //
 
 const letterCounter = (str) => {
-    // let words = str.split(" ");
-    // // let wordsToEdit = words;
-    // let result = "";
-    // words.forEach(word => {
-    //     let repeat =1 ;
-    //     for(let i =0;i<word.length-1;i++){
-    //         let isEqual=word[i]==word[i+1];
-    //         if(isEqual){
-    //             repeat++;
-    //         }else if(i+1==word.length-1||!isEqual){
-    //             result+=word[i]+repeat;
-    //             repeat=1;
-    //         }
-    //     }
-    //     // result+=" ";
-    // });
-    // return result.trim();
     let words = str.split(" ");
     let result = "";
     words.forEach(word => {
