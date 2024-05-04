@@ -51,7 +51,7 @@ const detectFace = (arr) => {
 const eveCharacter = (str) => {
     let result = "";
     for (let i = 0; i < str.length; i++) {
-        if ((i + 1) % 2 == 1) {
+        if (i % 2 == 0) {
             result += str[i];
         }
     }
@@ -79,7 +79,7 @@ const chickenGradients = (arr) => {
     let result = [];
     arr.forEach(meal => {
         meal.forEach(ingredient => {
-            if(ingredient.includes("chicken")){
+            if (ingredient.includes("chicken")) {
                 result.push([ingredient]);
             }
         });
